@@ -1,0 +1,17 @@
+{
+    "name": "crypto-mining-content-loader",
+    "version": "0.0.1",
+    "description": "Crypto mining content loader with CoinHive",
+    "main": "src/app.js",
+    "scripts": {
+        "compile": "rollup --config",
+        "dev": "rollup --config --watch"
+    },
+    "author": "Tim Verheijke",
+    "license": "MIT",
+    "devDependencies": {
+        "rollup-plugin-commonjs": "^9.1.0",
+        "rollup-plugin-json": "^2.3.0",
+        "rollup-plugin-node-resolve": "^3.3.0"
+    }
+}
