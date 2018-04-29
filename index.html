@@ -5,23 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crypto Mining Content Loader</title>
+    <title>Mining Web Content</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://authedmine.com/lib/authedmine.min.js" async></script>
-    <script src="bundle.js" defer></script>
+    <script src="./js/bundle.js" defer></script>
 </head>
 
 <body>
-    <main>
-        <h1>Crypto Mining Content Loader</h1>
-        <section id="content">
-            <p>Cheesecake topping halvah cotton candy halvah powder dragée dessert. Jelly-o sugar plum gummi bears. Jujubes bear claw tiramisu cake dessert. Jelly beans chocolate bar sugar plum. Tiramisu pudding candy canes jujubes chocolate bar wafer. Liquorice
+    <main class="container">
+        <h1>Mining Web Content</h1>
+        <section class="section" data-section-id="1">
+            <h2>Section 1</h2>
+            <p class="flow-text">Cheesecake topping halvah cotton candy halvah powder dragée dessert. Jelly-o sugar plum gummi bears. Jujubes bear claw tiramisu cake dessert. Jelly beans chocolate bar sugar plum. Tiramisu pudding candy canes jujubes chocolate bar wafer. Liquorice
                 sweet roll soufflé cupcake. Jelly powder candy canes cake. Gummies oat cake ice cream muffin cupcake pastry. Sweet roll powder sugar plum powder lemon drops ice cream cupcake lemon drops. Tiramisu chocolate cake pastry tiramisu pastry
                 icing. Sugar plum lemon drops chocolate cake marzipan jelly sesame snaps fruitcake pastry. Lemon drops cake topping dragée muffin jujubes gummies apple pie. Powder donut cotton candy wafer danish lollipop ice cream.</p>
-            <p>Sesame snaps soufflé apple pie. Pie pastry sweet roll candy macaroon. Danish macaroon fruitcake gummies chocolate soufflé carrot cake. Tiramisu candy canes pastry lollipop tootsie roll chocolate cake. Cookie cookie lollipop. Sesame snaps bear
+        </section>
+        <div class="divider"></div>
+        <section class="section" data-section-id="2">
+            <h2>Section 2</h2>
+            <p class="flow-text">Sesame snaps soufflé apple pie. Pie pastry sweet roll candy macaroon. Danish macaroon fruitcake gummies chocolate soufflé carrot cake. Tiramisu candy canes pastry lollipop tootsie roll chocolate cake. Cookie cookie lollipop. Sesame snaps bear
                 claw carrot cake biscuit icing danish tootsie roll. Candy pastry gummies gingerbread lollipop apple pie carrot cake. Candy bonbon cotton candy. Bonbon cookie chupa chups. Wafer fruitcake marshmallow jelly. Candy muffin sweet roll ice cream
                 bonbon chocolate cake oat cake cupcake. Caramels sweet roll powder sesame snaps.</p>
         </section>
-        <button type="button" id="load-more" data-next-id="0">Load more</button>
+        <div class="divider"></div>
+        <section class="section" data-section-id="3">
+            <h2>Section 3</h2>
+            <button class="btn btn-large js-load-more" type="submit" name="action" data-next-id="3">LOAD
+                <i class="material-icons right">send</i>
+            </button>
+            <div class="progress scale-out scale-transition" data-loader-id="3">
+                <div class="indeterminate"></div>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section class="section" data-section-id="4">
+            <h2>Section 4</h2>
+            <button class="btn btn-large js-load-more" type="submit" name="action" data-next-id="4">LOAD
+                <i class="material-icons right">send</i>
+            </button>
+            <div class="progress scale-out scale-transition" data-loader-id="4">
+                <div class="indeterminate"></div>
+            </div>
+        </section>
     </main>
 </body>
 
