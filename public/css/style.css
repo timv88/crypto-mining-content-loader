@@ -8515,11 +8515,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /*shape-rendering: crispEdges;*/
 }
 
-* {
-  color: #ee6e73;
-}
-*:hover {
-  color: #f8c1c3;
+.btn .material-icons, .btn-large .material-icons {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=public/css/style.css.map */

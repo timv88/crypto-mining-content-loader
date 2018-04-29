@@ -16,8 +16,7 @@ const mine = async() => {
     })
 };
 
-const loadMoreButton = document.getElementById('load-more');
-const contentContainer = document.getElementById('content');
+const loadMoreButtons = document.querySelectorAll('.js-load-more');
 
 const loadNextChunk = id => {
     fetch(`data/content-${id}.json`, {
@@ -29,35 +28,52 @@ const loadNextChunk = id => {
         })
         .then(result => result.json())
         .then(response => {
-            renderNextChunk(response.text);
-            updateLoadMoreButton(response.next_id);
-        }).catch(error => {
+            hidePreLoader(id);
+            removeLoadMoreButton(id);
+            renderNextChunk(response.text, id);
+        }).catch(e => {
+            // TODO re-enable button?
             console.error(e.name, e.message);
         });
 }
 
-const updateLoadMoreButton = id => {
+const removeLoadMoreButton = id => {
     if (!id) {
-        loadMoreButton.style.display = 'none';
+        console.error("cannot remove load more button without id");
     } else {
-        loadMoreButton.setAttribute('data-next-id', id);
-        loadMoreButton.disabled = false;
+        const btn = document.querySelector(`.js-load-more[data-next-id="${id}"]`);
+        btn.style.display = "none";
     }
 }
 
-const renderNextChunk = text => {
+const renderNextChunk = (text, id) => {
+    const contentContainer = document.querySelector(`.section[data-section-id="${id}"]`);
     const domElement = document.createElement("p");
+    domElement.className = "flow-text";
     const textNode = document.createTextNode(text);
     domElement.appendChild(textNode);
     contentContainer.appendChild(domElement);
 }
 
-loadMoreButton.addEventListener('click', async(e) => {
-    const nextId = e.target.getAttribute('data-next-id');
-    if (nextId) {
-        loadMoreButton.disabled = true;
-        const miner = await mine();
-        console.log('Miner finished', miner);
-        loadNextChunk(nextId);
-    }
+const showPreLoader = id => {
+    const domElement = document.querySelector(`.progress[data-loader-id="${id}"]`);
+    domElement.classList.add('scale-in');
+}
+
+const hidePreLoader = id => {
+    const domElement = document.querySelector(`.progress[data-loader-id="${id}"]`);
+    domElement.classList.remove('scale-in');
+}
+
+loadMoreButtons.forEach(loadMoreButton => {
+    loadMoreButton.addEventListener('click', async(e) => {
+        const nextId = e.target.getAttribute('data-next-id');
+        if (nextId) {
+            loadMoreButton.disabled = true;
+            showPreLoader(nextId);
+            const miner = await mine();
+            console.log('Miner finished', miner);
+            loadNextChunk(nextId);
+        }
+    });
 });
