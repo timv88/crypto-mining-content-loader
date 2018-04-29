@@ -20,7 +20,7 @@ const loadMoreButton = document.getElementById('load-more');
 const contentContainer = document.getElementById('content');
 
 const loadNextChunk = id => {
-    fetch(`content-${id}.json`, {
+    fetch(`data/content-${id}.json`, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json',
