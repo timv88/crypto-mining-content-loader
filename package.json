@@ -4,8 +4,8 @@
     "description": "Crypto mining content loader with CoinHive",
     "main": "src/app.js",
     "scripts": {
-        "build": "rollup --config",
-        "dev": "rollup --config --watch",
+        "build": "set NODE_ENV=production && rollup --config",
+        "dev": "set NODE_ENV=dev && rollup --config --watch",
         "css": "sass ./src/style.scss ./public/css/style.css",
         "gh-pages": "gh-pages-clean && gh-pages -d ./public"
     },
@@ -14,12 +14,14 @@
     "devDependencies": {
         "gh-pages": "^1.1.0",
         "rollup-plugin-commonjs": "^9.1.0",
+        "rollup-plugin-conditional": "^1.1.1",
         "rollup-plugin-json": "^2.3.0",
+        "rollup-plugin-livereload": "^0.6.0",
         "rollup-plugin-node-resolve": "^3.3.0",
-        "sass": "^1.3.0"
+        "rollup-plugin-sass": "^0.6.1",
+        "rollup-plugin-serve": "^0.4.2"
     },
     "dependencies": {
-        "jquery": "^3.3.1",
         "materialize-css": "^0.100.2"
     }
 }
