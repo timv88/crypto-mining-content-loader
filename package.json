@@ -6,6 +6,7 @@
     "scripts": {
         "build": "rollup --config",
         "dev": "rollup --config --watch",
+        "css": "sass ./src/style.sass ./public/style.css",
         "gh-pages": "gh-pages-clean && gh-pages -d ./public"
     },
     "author": "Tim Verheijke",
@@ -14,6 +15,7 @@
         "gh-pages": "^1.1.0",
         "rollup-plugin-commonjs": "^9.1.0",
         "rollup-plugin-json": "^2.3.0",
-        "rollup-plugin-node-resolve": "^3.3.0"
+        "rollup-plugin-node-resolve": "^3.3.0",
+        "sass": "^1.3.0"
     }
 }
