@@ -6,8 +6,7 @@
     "scripts": {
         "build": "set NODE_ENV=production && rollup --config",
         "dev": "set NODE_ENV=dev && rollup --config --watch",
-        "css": "sass ./src/style.scss ./public/css/style.css",
-        "gh-pages": "gh-pages-clean && gh-pages -d ./public"
+        "gh-pages": "gh-pages-clean && set NODE_ENV=production && rollup --config && gh-pages -d ./public"
     },
     "author": "Tim Verheijke",
     "license": "MIT",
@@ -22,6 +21,7 @@
         "rollup-plugin-serve": "^0.4.2"
     },
     "dependencies": {
-        "materialize-css": "^0.100.2"
+        "materialize-css": "^0.100.2",
+        "showdown": "^1.8.6"
     }
 }

