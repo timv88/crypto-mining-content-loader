@@ -6918,4 +6918,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 p > img {
   margin-left: auto;
   margin-right: auto;
-  display: inherit; }
+  display: inherit;
+  width: 100%;
+  height: auto;
+  /*
+        TODO: Limit max-width based on native width of image. Showdown extension?
+        For now, hardcode them based on known width:
+    */ }
+  p > img[width="350"] {
+    max-width: 350px; }
