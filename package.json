@@ -1,12 +1,12 @@
 {
     "name": "crypto-mining-content-loader",
     "version": "0.0.1",
-    "description": "Crypto mining content loader with CoinHive",
+    "description": "Web content mining POC",
     "main": "src/app.js",
     "scripts": {
         "build": "set NODE_ENV=production && rollup --config",
         "dev": "set NODE_ENV=dev && rollup --config --watch",
-        "gh-pages": "gh-pages-clean && set NODE_ENV=production && rollup --config && gh-pages -d ./public"
+        "gh-pages": "gh-pages-clean && gh-pages -d ./public"
     },
     "author": "Tim Verheijke",
     "license": "MIT",
