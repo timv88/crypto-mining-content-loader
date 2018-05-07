@@ -1,6 +1,5 @@
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
-import json from 'rollup-plugin-json';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 import sass from 'rollup-plugin-sass';

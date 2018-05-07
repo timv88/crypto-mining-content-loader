@@ -2013,7 +2013,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #0097a7; }
+  border-left: 5px solid #2196F3; }
 
 i {
   line-height: inherit; }
@@ -2052,7 +2052,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #0097a7; }
+    background-color: #2196F3; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2186,7 +2186,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #fff;
-  background-color: #0097a7; }
+  background-color: #2196F3; }
   .page-footer .footer-copyright {
     overflow: hidden;
     min-height: 50px;
@@ -2326,14 +2326,14 @@ th {
     .collection .collection-item:last-child {
       border-bottom: none; }
     .collection .collection-item.active {
-      background-color: #0097a7;
-      color: #c1f9ff; }
+      background-color: #ff6d00;
+      color: white; }
       .collection .collection-item.active .secondary-content {
         color: #fff; }
   .collection a.collection-item {
     display: block;
     transition: .25s;
-    color: #0097a7; }
+    color: #ff6d00; }
     .collection a.collection-item:not(.active):hover {
       background-color: #ddd; }
   .collection.with-header .collection-header {
@@ -2347,7 +2347,7 @@ th {
 
 .secondary-content {
   float: right;
-  color: #0097a7; }
+  color: #ff6d00; }
 
 .collapsible .collection {
   margin: 0;
@@ -2370,7 +2370,7 @@ th {
   height: 4px;
   display: block;
   width: 100%;
-  background-color: #74f2ff;
+  background-color: #ffe2cc;
   border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden; }
@@ -2379,10 +2379,10 @@ th {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #0097a7;
+    background-color: #ff6d00;
     transition: width .3s linear; }
   .progress .indeterminate {
-    background-color: #0097a7; }
+    background-color: #ff6d00; }
     .progress .indeterminate:before {
       content: '';
       position: absolute;
@@ -3047,7 +3047,7 @@ th {
 
 nav {
   color: #fff;
-  background-color: #0097a7;
+  background-color: #2196F3;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -3415,18 +3415,18 @@ small {
 
 .btn:focus, .btn-large:focus,
 .btn-floating:focus {
-  background-color: #006974; }
+  background-color: #cc5700; }
 
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #0097a7;
+  background-color: #ff6d00;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer; }
   .btn:hover, .btn-large:hover {
-    background-color: #00aec1; }
+    background-color: #ff7c1a; }
 
 .btn-floating {
   display: inline-block;
@@ -3438,13 +3438,13 @@ small {
   height: 40px;
   line-height: 40px;
   padding: 0;
-  background-color: #0097a7;
+  background-color: #ff6d00;
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
   vertical-align: middle; }
   .btn-floating:hover {
-    background-color: #0097a7; }
+    background-color: #ff6d00; }
   .btn-floating:before {
     border-radius: 0; }
   .btn-floating.btn-large {
@@ -3543,7 +3543,7 @@ button.btn-floating {
     z-index: -1;
     width: 40px;
     height: 40px;
-    background-color: #0097a7;
+    background-color: #ff6d00;
     border-radius: 50%;
     transform: scale(0); }
 
@@ -3625,7 +3625,7 @@ button.btn-floating {
   width: 100%;
   height: 100%;
   opacity: 0;
-  border-color: #0097a7; }
+  border-color: #ff6d00; }
 
 .spinner-blue,
 .spinner-blue-only {
@@ -3950,29 +3950,19 @@ button.btn-floating {
 body {
   background-color: #fafafa; }
 
-nav,
-.page-footer {
-  background-color: #0097a7; }
-
 .btn .material-icons, .btn-large .material-icons {
   pointer-events: none; }
 
-p > img {
+.image-center {
   margin-left: auto;
   margin-right: auto;
   display: inherit;
   width: 100%;
-  height: auto;
-  /*
-        TODO: Limit max-width based on native width of image. Showdown extension?
-        For now, hardcode them based on known width:
-    */ }
-  p > img[width="350"] {
-    max-width: 350px; }
+  height: auto; }
 
 .notice {
-  background-color: #EF5350;
-  border: 1px solid #D32F2F;
+  background-color: #ff6d00;
+  border: 1px solid;
   padding: 1rem;
   border-radius: .25rem; }
   .notice .notice-icon {

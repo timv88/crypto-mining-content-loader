@@ -1,4 +1,3 @@
-import markupToHtml from "./showdown";
 import "./style.scss";
 
 
@@ -23,18 +22,19 @@ const mine = async() => {
 const loadMoreButtons = document.querySelectorAll('.js-load-more');
 
 const loadNextChunk = id => {
-    fetch(`data/content-${id}.json`, {
+    fetch(`data/content-${id}.html`, {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
+                'Content-Type': 'text/html; charset=utf-8',
+                'Accept': '*/*',
             }
         })
-        .then(result => result.json())
-        .then(response => {
+        .then(response => response.text())
+        .then(body => {
+            console.log('body', body);
             hidePreLoader(id);
             removeLoadMoreButton(id);
-            renderNextChunk(response.markup, id);
+            renderNextChunk(body, id);
         }).catch(e => {
             // TODO re-enable button?
             console.error(e.name, e.message);
@@ -54,8 +54,7 @@ const renderNextChunk = (markup, id) => {
     const contentContainer = document.querySelector(`.section[data-section-id="${id}"]`);
     const domElement = document.createElement("div");
 
-    const html = markupToHtml(markup);
-    domElement.innerHTML = html;
+    domElement.innerHTML = markup;
     contentContainer.appendChild(domElement);
 }
 

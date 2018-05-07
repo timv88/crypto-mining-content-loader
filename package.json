@@ -14,14 +14,12 @@
         "gh-pages": "^1.1.0",
         "rollup-plugin-commonjs": "^9.1.0",
         "rollup-plugin-conditional": "^1.1.1",
-        "rollup-plugin-json": "^2.3.0",
         "rollup-plugin-livereload": "^0.6.0",
         "rollup-plugin-node-resolve": "^3.3.0",
         "rollup-plugin-sass": "^0.6.1",
         "rollup-plugin-serve": "^0.4.2"
     },
     "dependencies": {
-        "materialize-css": "^0.100.2",
-        "showdown": "^1.8.6"
+        "materialize-css": "^0.100.2"
     }
 }

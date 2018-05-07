@@ -1,8 +1,8 @@
 @charset "UTF-8";
 // Colors
 @import "../node_modules/materialize-css/sass/components/color";
-$primary-color: color("cyan", "darken-2") !default;
-$secondary-color: color("cyan", "darken-2") !default;
+$primary-color: color("blue", "base") !default;
+$secondary-color: color("orange", "accent-4") !default;
 // Variables
 @import "../node_modules/materialize-css/sass/components/variables";
 // Reset
@@ -43,10 +43,6 @@ body {
     background-color: color("grey", "lighten-5");
 }
 
-nav,
-.page-footer {
-    background-color: $primary-color;
-}
 // fix icons in buttons not triggering btn click event (probably due to lack of materialize.js)
 .btn {
     .material-icons {
@@ -59,27 +55,19 @@ main {
         @extend .flow-text;
     }
 }
-// center images with showdown's generated syntax
-p > img {
+
+.image-center {
     margin-left: auto;
     margin-right: auto;
     display: inherit;
 
     width: 100%;
     height: auto;
-
-    /*
-        TODO: Limit max-width based on native width of image. Showdown extension?
-        For now, hardcode them based on known width:
-    */
-    &[width="350"] {
-        max-width: 350px;
-    }
 }
 
 .notice {
-    background-color: color("red", "lighten-1");
-    border: 1px solid color("red", "darken-2");
+    background-color: $secondary-color;
+    border: 1px solid color("orange", "darken-4 ");
     @extend .white-text;
     padding: 1rem;
     border-radius: .25rem;
